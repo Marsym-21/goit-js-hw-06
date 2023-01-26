@@ -4,7 +4,6 @@ function getRandomHexColor() {
 		.padStart(6, 0)}`;
 }
 const input = document.querySelector("input");
-input.value = 0;
 const buttonCreate = document.querySelector("button[data-create]");
 
 const buttonDestroy = document.querySelector("button[data-destroy]");
@@ -38,4 +37,5 @@ const emptyArray = [];
 buttonDestroy.addEventListener("click", () => {
 	boxes.innerHTML = "";
 	numbersArray.splice(0, numbersArray.length);
+	input.value = "";
 });
