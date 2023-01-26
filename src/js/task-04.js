@@ -7,14 +7,21 @@ const incrementBtn = document.querySelector(' #counter button[data-action="incre
 let counterValue = 0;
 
 decrementBtn.addEventListener("click", () => {
-	counterValue = counterValue - 100;
+	counterValue = counterValue - 1;
 	value.textContent = counterValue;
+	if (value.textContent < 0) {
+		value.style.color = "tomato";
+	}
+
 	return value;
 });
 
 incrementBtn.addEventListener("click", () => {
-	counterValue = counterValue + 100;
+	counterValue = counterValue + 1;
 	value.textContent = counterValue;
+	if (value.textContent > 0) {
+		value.style.color = "green";
+	}
 	return value;
 });
 
