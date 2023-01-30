@@ -5,5 +5,3 @@ text.style.fontSize = `${input.value}px`;
 input.addEventListener("input", () => {
 	text.style.fontSize = `${input.value}px`;
 });
-
-// Не зрозумів що мали на увазі(((
