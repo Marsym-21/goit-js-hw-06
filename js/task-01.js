@@ -4,12 +4,12 @@ const listItems = document.querySelectorAll("li.item");
 const quantityListItems = listItems.length;
 console.log(`Number of categories: ${quantityListItems}`);
 
-for (const items of listItems) {
+listItems.forEach(function (items, index) {
 	// console.log(items);
-	const title = items.querySelector("h2");
+	const title = items.firstElementChild;
 	console.log(`Category: ${title.textContent}`);
-	const lists = items.querySelector("ul");
+	const lists = items.lastElementChild;
 	// console.log(lists);
 	const quantityElements = lists.querySelectorAll("li").length;
 	console.log(`Elements: ${quantityElements}`);
-}
+});

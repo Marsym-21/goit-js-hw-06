@@ -1,16 +1,12 @@
 const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
 
 const list = document.querySelector("#ingredients");
-console.log(list);
 
-// let items;
-
-for (const name of ingredients) {
-	// console.log(name);
+const newArray = ingredients.map(ingredient => {
 	const items = document.createElement("li");
-	items.textContent = name;
+	items.textContent = ingredient;
+	items.classList = "item";
+	return items;
+});
 
-	// console.log(items);
-
-	list.insertAdjacentHTML("afterbegin", `<li class = item> ${items.textContent} </li>`);
-}
+list.append(...newArray);
