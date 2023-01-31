@@ -10,6 +10,5 @@ listItems.forEach(function (items, index) {
 	console.log(`Category: ${title.textContent}`);
 	const lists = items.lastElementChild;
 	// console.log(lists);
-	const quantityElements = lists.querySelectorAll("li").length;
-	console.log(`Elements: ${quantityElements}`);
+	console.log(`Elements: ${items.lastElementChild.children.length}`);
 });
